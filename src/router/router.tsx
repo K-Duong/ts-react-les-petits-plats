@@ -1,24 +1,17 @@
-import { createBrowserRouter, Outlet } from "react-router-dom"
+import { createBrowserRouter } from "react-router-dom"
 import ErrorPage from "../pages/errorPage"
 import HomePage from "../pages/homePage"
+import { Root } from "./root"
 
 export const PATH = {
   "HOME" : "/",
   "ERROR": "error"
 }
 
-export function Route () {
-  return (
-    <div>
-      <Outlet/>
-    </div>
-  )
-}
-
 export const router = createBrowserRouter([
   {
     path: PATH.HOME,
-    element: <Route/>,
+    element: <Root/>,
     errorElement: <ErrorPage/>,
     children: [{
       path:"",

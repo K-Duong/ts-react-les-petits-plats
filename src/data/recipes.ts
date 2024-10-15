@@ -1,4 +1,6 @@
-const recipes = [
+
+import { Recipe } from "../types/recipes";
+const recipes : Recipe[] = [
     {
         "id": 1,
         "image": "Recette01.jpg",
@@ -1773,4 +1775,6 @@ const recipes = [
         "appliance": "Four",
         "ustensils":["rouleau à patisserie","fouet"]
     }
-]
+];
+
+export default recipes
