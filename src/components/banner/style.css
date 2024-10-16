@@ -23,6 +23,9 @@
 .banner .search-recipe h1 {
   font-family: var(--anton);
   color: white;
+  /* tip for text stroke */
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
   text-align: center;
   width: 70%;
 }
@@ -34,4 +37,3 @@
   border-color: var(--light-gray);
   width: 60%;
 }
-
