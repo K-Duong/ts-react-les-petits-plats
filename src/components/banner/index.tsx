@@ -4,7 +4,10 @@ import { ChangeEvent, PropsWithChildren } from "react";
 import InputSearch from "../searchInput";
 import recipes from "../../data/recipes";
 import "./style.css";
+import { filterByDescription, filterByIngredient, filterByName } from "../../features/searchRecipes/generalSearch";
 function Banner(props: PropsWithChildren) {
+
+  // TODO: [currentRecipes, setCurrentRecipes] = useState(null)
   const { children } = props;
   const listOfRecipesImages = recipes.map((recipe) => recipe.image);
 
@@ -16,7 +19,7 @@ function Banner(props: PropsWithChildren) {
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
   };
-
+ 
   return (
     <div className="banner">
       {children}

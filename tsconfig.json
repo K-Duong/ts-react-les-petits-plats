@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5", // Specifies the JavaScript version the code will compile to.
+    "target": "es6", // Specifies the JavaScript version the code will compile to.
     "module": "commonjs", // The module system to use.
     "strict": true,
     "noImplicitAny": true,
