@@ -22,6 +22,7 @@
 
 .banner .search-recipe h1 {
   font-family: var(--anton);
+  font-size: 3rem;
   color: white;
   /* tip for text stroke */
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
@@ -31,6 +32,7 @@
 }
 
 .banner .search-recipe .general-search {
+  font-size: 1rem;
   padding: 1em;
   color: var(--light-gray);
   border-radius: 10px;

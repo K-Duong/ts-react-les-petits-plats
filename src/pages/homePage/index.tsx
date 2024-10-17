@@ -2,6 +2,8 @@ import { useContext } from "react"
 import { RecipesContext } from "../../context/recipesContext"
 import { RecipesContextType } from "../../types/recipesContext"
 
+import "./style.css"
+
 
 function HomePage ()  {
   const {currentRecipes} = useContext(RecipesContext) as RecipesContextType;
