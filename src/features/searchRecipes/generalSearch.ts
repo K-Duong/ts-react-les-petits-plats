@@ -17,12 +17,15 @@ export const filterByIngredient = (input: string, currentRecipes: Recipe[]): Rec
       .map(ingredientInfo => ingredientInfo.ingredient)
       .some((ing) => normalizeStr(ing).includes(normalizeStr(input)))
 
-    // return recipe.ingredients.filter(ingredientInfo => {
-    //   console.log("ingredient info:", ingredientInfo.ingredient, normalizeStr(ingredientInfo.ingredient).includes(normalizeStr(input)));
+ })
+}
 
-    //   return normalizeStr(ingredientInfo.ingredient).includes(normalizeStr(input))
-    // })
-
+export const filterByUstensil = (input: string, currentRecipes: Recipe[]) : Recipe[] => {
+  return currentRecipes.filter(recipe => {
+    return recipe.ustensils.some(us => us.includes(normalizeStr(input)))
   })
 }
 
+export const filterByAppliance = (input: string, currentRecipes: Recipe[]) : Recipe[] => {
+  return currentRecipes.filter(recipe => normalizeStr(recipe.description).includes(normalizeStr(input)))
+}

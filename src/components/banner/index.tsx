@@ -1,25 +1,21 @@
-
-
-import { ChangeEvent, PropsWithChildren } from "react";
+import { ChangeEvent, PropsWithChildren, useContext } from "react";
+import { randomizeSrcImage } from "../../utils/randomizeImage";
 import InputSearch from "../searchInput";
-import recipes from "../../data/recipes";
+import { RecipesContext } from "../../context/recipesContext";
+import { RecipesContextType } from "../../types/recipesContext";
 import "./style.css";
-import { filterByDescription, filterByIngredient, filterByName } from "../../features/searchRecipes/generalSearch";
+
 function Banner(props: PropsWithChildren) {
-
-  // TODO: [currentRecipes, setCurrentRecipes] = useState(null)
   const { children } = props;
-  const listOfRecipesImages = recipes.map((recipe) => recipe.image);
-
-  const randomizeSrcImage = (): string => {
-    const randomIndex = Math.floor(Math.random() * 50);
-    return `src/assets/image_recipes/${listOfRecipesImages[randomIndex]}`;
-  };
-
+  
+  const {generalSearch} = useContext(RecipesContext) as RecipesContextType;
+ 
   const handleSearch = (e: ChangeEvent<HTMLInputElement>) => {
     console.log(e.target.value);
+    const inputValue = e.target.value
+    generalSearch(inputValue);
   };
- 
+
   return (
     <div className="banner">
       {children}
