@@ -1,12 +1,9 @@
 import { createBrowserRouter } from "react-router-dom"
 import ErrorPage from "../pages/errorPage"
 import HomePage from "../pages/homePage"
-import { Root } from "./root"
+import { PATH } from "../constants"
+import { Roatot } from "./root"
 
-export const PATH = {
-  "HOME" : "/",
-  "ERROR": "error"
-}
 
 export const router = createBrowserRouter([
   {
