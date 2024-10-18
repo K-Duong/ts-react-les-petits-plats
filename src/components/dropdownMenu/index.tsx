@@ -1,12 +1,8 @@
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
+import { PropsDropdownMenu } from "../../types/dropdownMenu";
 import InputSearch from "../searchInput";
 import "./style.css";
 
-interface PropsDropdownMenu {
-  dropdownType: string;
-  dropdownList: string[];
-  handleAdvancedSearch: (e: ChangeEvent<HTMLInputElement>) => void;
-}
 function DropdownMenu(props: PropsDropdownMenu) {
   const [openedDropdown, setOpenedDropdown] = useState<boolean>(false);
   const { dropdownType, dropdownList, handleAdvancedSearch } = props;
