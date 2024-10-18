@@ -1,10 +1,12 @@
 import { useContext } from "react";
+
 import { RecipesContext } from "../../context/recipesContext";
 import { RecipesContextType } from "../../types/recipesContext";
 
-import "./style.css";
 import DropdownMenu from "../../components/dropdownMenu";
+import CardRecipe from "../../components/cardRecipe";
 
+import "./style.css";
 function HomePage() {
   const { currentRecipes, dropdownLists, advancedSearch } = useContext(
     RecipesContext
@@ -18,7 +20,7 @@ function HomePage() {
     } else if (currentRecipes.length > 1) {
       return (
         <p className="number-result">
-          ${currentRecipes.length} recettes retrouvées
+          {currentRecipes.length < 10 ? "0" : ""}{currentRecipes.length} recettes retrouvées
         </p>
       );
     } else {
@@ -55,7 +57,7 @@ function HomePage() {
 
       </div>
       <div className="list-of-cards">
-      
+       {currentRecipes.map (recipe => <CardRecipe key={recipe.name} recipe={recipe}/>)}
       </div>
     </div>
   );

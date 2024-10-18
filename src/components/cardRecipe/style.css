@@ -1,0 +1,70 @@
+.card-recipe {
+  width: 30%;
+  border-radius: 2rem;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  & .card-header {
+    position: relative;
+    display: flex;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+
+    & .recipe-img {
+      width: 100%;
+      object-fit: cover;
+      height: 200px;
+      border-top-left-radius: 2rem;
+      border-top-right-radius: 2rem;
+    }
+    & .recipe-time {
+      position: absolute;
+      right: 20px;
+      margin-top: 20px;
+      background-color: var(--yellow);
+      padding: 5px 15px 5px 15px;
+      border-radius: 20px;
+    }
+  }
+   & p {
+    font-family: var(--manrope);
+    font-size: 1em;
+   }
+
+  & .card-body {
+    padding: 1.5rem;
+
+    & .recipe-title {
+      font-weight: 700;
+      font-family: var(--manrope);
+      font-size: 1.25rem;
+    }
+
+    & .recipe-subtitle  {
+      color: var(--light-gray);
+      font-weight: 700;
+    }
+    & .recipe-ingredients {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      row-gap: 15px;
+
+      & .ingredient-info {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        
+        & p {
+          margin: 0;
+        }
+
+        & .ingredient-quantity {
+          color: var(--light-gray);
+          font-weight: 100;
+        }
+      }
+    }
+
+  }
+}
