@@ -1,0 +1,29 @@
+.dropdown-items {
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+ 
+
+  & .dropdown-menu {
+    width: 30%;
+    background-color: white;
+    border-radius: 5px;
+    height: auto;
+
+    & .dropdown-top {
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem;
+    }
+
+    & .dropdown-down {
+      & ul {
+        padding: 1rem;
+
+        & li {
+          list-style-type: none;
+        }
+      }
+    }
+  }
+}
